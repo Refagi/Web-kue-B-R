@@ -1,0 +1,425 @@
+*,
+html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden; /* Menyembunyikan overflow horizontal */
+}
+
+.container-home {
+  background-image: url("../assets/Image-Bolu-kukus.jpg");
+  height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  width: 100%;
+  /* object-fit: contain; */
+}
+
+nav .item-nav {
+  /* position: fixed; */
+  /* z-index: 1000; */
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  /* background: transparent; */
+  padding: 1rem;
+  /* background-color: rgb(38, 70, 83); */
+}
+
+nav .item-nav .logo-nav {
+  padding-left: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav .item-nav ul {
+  display: flex;
+  align-items: center;
+  padding-right: 5rem;
+  list-style: none;
+}
+
+nav .item-nav ul li a {
+  padding: 15px;
+  margin: 5px 10px 5px 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out
+}
+
+nav .item-nav ul li a:hover,
+nav .item-nav ul li a.active {
+  color: rgb(38, 70, 83);
+  padding: 15px;
+  margin: 10px 10px 10px 10px;
+}
+
+.tombol{
+	display: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	color: white;
+	font-size: 14pt;
+}
+
+.item-body {
+  align-content: center;
+  padding: 12rem 7rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  height: 100vh;
+}
+
+.item-body .item-text-first h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-text-second {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.gradient-line-first hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    rgb(38, 70, 83),
+    #0077b6
+  ); /* Warna gradient */
+  width: 80%;
+  margin: 50px auto 50px auto;
+}
+
+.gradient-line-second hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    rgb(38, 70, 83),
+    #0077b6
+  ); /* Warna gradient */
+  width: 80%;
+  margin: 50px auto 50px auto;
+}
+
+.container-produk {
+  min-height: auto;
+}
+
+.container-produk .judul-produk h2 {
+  text-align: center;
+  color: rgb(38, 70, 83);
+  margin: 25px auto 25px auto;
+}
+
+/* Mengatur tampilan grid untuk produk */
+.item-produk {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* Mengatur tampilan kartu produk */
+.item-option-produk {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.item-option-produk:hover {
+  transform: translateY(-10px);
+}
+
+/* Gambar produk */
+.item-option-produk img {
+  max-width: 75%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.item-nama-produk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(38, 70, 83);
+}
+
+.item-nama-produk p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.judul-produk h2 {
+  text-align: center;
+  color: rgb(38, 70, 83);
+  margin: 25px auto 10px auto;
+}
+
+
+.container-keunggulan {
+  text-align: center;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-keunggulan-first {
+  display: flex;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  width: 100%;
+}
+
+.item-keunggulan-second {
+  display: flex;
+  gap: 10px;
+  animation: scroll 40s linear infinite;
+  width: calc(300px * 24); /* Ganti 12 dengan jumlah total item yang ada (termasuk yang diduplikasi) */
+}
+
+.item-keunggulan-second:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(calc(-300px * 12));}
+}
+
+.item-keunggulan-first .item-keunggulan-second .item-keunggulan-third{
+  list-style: none;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  padding: 15px;
+  margin:  25px;
+  width: 300px; /* Atur lebar yang tetap */
+  height: 300px; /* Atur tinggi yang tetap */
+  flex-shrink: 0; /* Menghindari item mengecil dalam flexbox */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(38, 70, 83);
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.item-keunggulan-first .item-keunggulan-second .item-keunggulan-third:hover {
+  background-color: #0077b6;
+  color: #fff;
+  animation: myAnimation 0.5s ease-in-out;
+
+}
+
+.item-keunggulan-third h3 {
+  margin: 25px 0 10px 0;
+  text-align: left;
+  color: #003049;
+}
+
+.container-tentang {
+  display: flex;
+  min-height: auto;
+}
+
+.container-tentang .item-tentang span, .container-tentang .item-tentang span p{
+  display: flex;
+  align-items: center;
+  margin: 25px 50px 25px 50px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  color: rgb(38, 70, 83);
+  line-height: 2;
+}
+
+.container-kontak {
+  min-height: auto;
+  background-color: rgb(38, 70, 83);
+  display: flex;
+  justify-content: center; /* Menyusun elemen di tengah horizontal */
+  align-items: center; /* Menyusun elemen di tengah vertikal */
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.item-kontak {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Memberikan jarak antar kolom */
+}
+
+.item-kontak ul li {display: flex; list-style: none; margin: 20px; align-items: center;}
+
+.item-kontak ul li a {text-decoration: none; color: #fff}
+
+.item-kontak ul li a:hover {color: #0077b6;}
+
+.item-kontak ul li i {
+  margin-right: 5px
+}
+
+.item-kontak-first,
+.item-kontak-second,
+.item-kontak-third {
+  flex: 1; /*Membuat setiap kolom memiliki lebar yang sama*/
+  padding: 10px;
+  margin: 25px;
+}
+
+.item-kontak-first h4,
+.item-kontak-second h4,
+.item-kontak-third h4{
+  padding: 0 0 10px 0;
+}
+
+.item-kontak-third p {
+  line-height: 2;
+}
+
+.container-hct {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-color: rgb(45, 82, 97);
+  color: #fff;
+}
+
+.container-hct span {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.container-hct span h5 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  nav .item-nav ul {
+    display: none;
+  }
+
+  nav .item-nav ul.aktif {
+    display: inline-block;
+    position: absolute;
+    top: 64px;
+		padding: 10px 20px;
+		right: 0;
+		left: 0;
+  }
+ 
+  nav .item-nav ul.aktif li a {
+    padding: 10px;
+		display: inline-block !important;
+  }
+
+  .tombol {
+		display: block;
+	}
+
+  nav .item-nav .logo-nav {
+    padding-left: 0;
+  }
+
+  .item-body {
+    padding: 5rem 3rem; /* Mengurangi padding */
+    text-align: center; /* Meratakan teks */
+  }
+
+  .item-body .item-text-first h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  .item-produk {
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); Mengurangi ukuran kolom */
+    display: flex;
+    min-height: 10vh;
+    overflow-x: auto;
+  }
+
+  .item-produk::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .item-produk .item-option-produk {
+    min-width: 30vh;
+    text-align: center;
+    padding: 10px;
+  }
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .container-tentang .item-tentang span, .container-tentang .item-tentang span p {
+    line-height: 1.5;
+    font-size: small;
+    display: flex;
+    text-align: start;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .container-kontak {
+    display: flex;
+    justify-content: flex-start;
+    font-size: small;
+  }
+
+  .item-kontak {
+    display: flex;
+    flex-direction: column;
+    gap: 10
+  }
+
+  .item-kontak ul li {
+    margin: 10px;
+  }
+}
